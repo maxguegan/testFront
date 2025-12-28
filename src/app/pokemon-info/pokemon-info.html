@@ -1,0 +1,6 @@
+<p>pokemon-info works!</p>
+<div *ngIf="selectedPokemon">
+<div>id : {{selectedPokemon?.id}}</div>
+<div>nom : {{selectedPokemon?.name}}</div>
+ <div *ngFor="let stat of selectedPokemon?.stats "> {{stat?.stat?.name}} : {{stat?.base_stat}}</div>
+</div>

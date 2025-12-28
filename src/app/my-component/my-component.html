@@ -1,0 +1,17 @@
+<div>
+    <input [(ngModel)]="id">
+</div>
+<div>
+    <input readonly value="{{ id }}">
+</div>
+<div *ngIf="pokemonList.length != 0">
+    <select [(ngModel)]="selectedPokemonUrl">
+        <option *ngFor="let pokemon of (pokemonList | filterPokemonPipe:'name':id)" value="{{pokemon.url}}"> {{pokemon.name}}</option>
+    </select>
+</div>
+<div>
+    <button (click)="getPokemon()">Go !</button>
+</div>
+<div>
+    <app-pokemon-info></app-pokemon-info>
+</div>
