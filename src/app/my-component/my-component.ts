@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Pokemon } from '../pokemon';
 import { ApiQuery } from '../api-query';
 import { CurPokemon } from '../cur-pokemon';

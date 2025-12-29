@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 
 
@@ -14,6 +14,7 @@ import { MyComponent } from './my-component/my-component';
 import { FilterPokemonPipePipe } from './filter-pokemon--pipe-pipe';
 import { PokemonInfo } from './pokemon-info/pokemon-info';
 import { CurPokemon } from './cur-pokemon';
+import { ApiQuery } from './api-query';
 
 @NgModule({
   declarations: [
@@ -21,17 +22,17 @@ import { CurPokemon } from './cur-pokemon';
     MyComponent,
     PokemonInfo,
     FilterPokemonPipePipe,
-    PokemonInfo
   ],
   imports: [
-
+    ApiQuery,
     FormsModule,
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
 
-    importProvidersFrom([HttpClientModule,CurPokemon])
+    importProvidersFrom([CurPokemon]),
+    provideHttpClient()  
   ],
   bootstrap: [App]
 })

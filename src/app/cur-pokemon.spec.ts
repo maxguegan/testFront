@@ -13,4 +13,13 @@ describe('CurPokemon', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should send the new value via the observable', async ()=> {
+       let val:String = ''; 
+       const newVal = 'truc';
+      service.getObservable().subscribe(s => val = s);
+    
+      service.setObservable(newVal);
+      expect(val).toBe(newVal);
+  })
 });
