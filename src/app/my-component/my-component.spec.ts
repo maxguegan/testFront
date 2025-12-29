@@ -47,6 +47,6 @@ describe('MyComponent', () => {
   it('should create the component', () => {
     expect(component).toBeTruthy();
   });
- 
+  
   
 });
