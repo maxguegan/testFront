@@ -16,7 +16,7 @@ export class ApiQuery {
   }
 
   getPokemonList(){
-    return this.http.get<AllPokemonQuery>('https://[…]/pokemons');
+    return this.http.get<AllPokemonQuery>("https://pokeapi.co/api/v2/pokemon");
   }
 
   getPokemonFromUrl(url :string) {

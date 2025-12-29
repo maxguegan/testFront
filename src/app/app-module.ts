@@ -14,7 +14,6 @@ import { MyComponent } from './my-component/my-component';
 import { FilterPokemonPipePipe } from './filter-pokemon--pipe-pipe';
 import { PokemonInfo } from './pokemon-info/pokemon-info';
 import { CurPokemon } from './cur-pokemon';
-import { ApiQuery } from './api-query';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,7 @@ import { ApiQuery } from './api-query';
     FilterPokemonPipePipe,
   ],
   imports: [
-    ApiQuery,
+
     FormsModule,
     BrowserModule,
     AppRoutingModule
